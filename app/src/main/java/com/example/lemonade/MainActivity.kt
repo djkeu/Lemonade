@@ -165,9 +165,13 @@ class MainActivity : AppCompatActivity() {
 
         when (lemonadeState) {
             "select" -> {
-
+                textAction.text = getString(R.string.lemon_select)
+                lemonImage?.setImageDrawable(R.drawable.lemon_tree)
             }
+            else -> println("else")
         }
+
+
         // TODO: set up a conditional that tracks the lemonadeState
 
         // TODO: for each state, the textAction TextView should be set to the corresponding string from
