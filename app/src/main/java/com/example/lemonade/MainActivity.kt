@@ -92,9 +92,7 @@ class MainActivity : AppCompatActivity() {
      * This method determines the state and proceeds with the correct action.
      */
     private fun clickLemonImage() {
-        when (lemonadeState) {  //wrong condition
-            lemonadeState -> "select"
-            else -> println("test")
+        if (lemonadeState == "select") {
         }
         // TODO: use a conditional statement like 'if' or 'when' to track the lemonadeState
         //  when the image is clicked we may need to change state to the next step in the
