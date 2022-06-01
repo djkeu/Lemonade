@@ -162,11 +162,12 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setViewElements() {
         val textAction: TextView = findViewById(R.id.text_action)
+        val lemonImage: ImageView = findViewById(R.id.imageView)
 
         when (lemonadeState) {
             "select" -> {
                 textAction.text = getString(R.string.lemon_select)
-                lemonImage?.setImageDrawable(R.drawable.lemon_tree)
+                lemonImage.setImageDrawable(R.drawable.lemon_tree)
             }
             else -> println("else")
         }
