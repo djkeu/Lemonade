@@ -92,6 +92,29 @@ class MainActivity : AppCompatActivity() {
      * This method determines the state and proceeds with the correct action.
      */
     private fun clickLemonImage() {
+        when (lemonadeState) {
+            "select" -> {
+                lemonadeState = "squeeze"
+                lemonSize = LemonTree().pick()
+                squeezeCount = 0
+            }
+            "squeeze" -> {
+                squeezeCount += 1
+                lemonSize -= 1
+                if (lemonSize == 0) {
+                    lemonadeState = "drink"
+                }
+            }
+            "drink" -> {
+                lemonadeState = "restart"
+                lemonSize = -1
+            }
+            "restart" -> lemonadeState = "select"
+            else -> lemonadeState = "select"
+        }
+
+        // if else  statements, replaced with when statement above
+        /*
         if (lemonadeState == "select") {
             lemonadeState = "squeeze"
             lemonSize = LemonTree().pick()
@@ -108,6 +131,7 @@ class MainActivity : AppCompatActivity() {
         } else if (lemonadeState == "restart"){
             lemonadeState = "select"
         }
+        */
 
         setViewElements()
 
@@ -138,6 +162,12 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setViewElements() {
         val textAction: TextView = findViewById(R.id.text_action)
+
+        when (lemonadeState) {
+            "select" -> {
+
+            }
+        }
         // TODO: set up a conditional that tracks the lemonadeState
 
         // TODO: for each state, the textAction TextView should be set to the corresponding string from
