@@ -111,26 +111,6 @@ class MainActivity : AppCompatActivity() {
             else -> throw IllegalStateException("Something went wrong")
         }
 
-        // if else  statements, replaced with when statement above
-        /*
-        if (lemonadeState == "select") {
-            lemonadeState = "squeeze"
-            lemonSize = LemonTree().pick()
-            squeezeCount = 0
-        } else if (lemonadeState == "squeeze") {
-            squeezeCount += 1
-            lemonSize -= 1
-            if (lemonSize == 0) {
-                lemonadeState = "drink"
-            }
-        } else if (lemonadeState == "drink") {
-            lemonadeState = "restart"
-            lemonSize = -1
-        } else if (lemonadeState == "restart"){
-            lemonadeState = "select"
-        }
-        */
-
         setViewElements()
 
     }
