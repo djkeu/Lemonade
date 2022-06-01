@@ -169,6 +169,7 @@ class MainActivity : AppCompatActivity() {
                 textAction.text = getString(R.string.lemon_select)
                 lemonImage.setImageResource(R.drawable.lemon_tree)
             }
+            // TODO: set other states of lemonadeState
             else -> println("else")
         }
 
