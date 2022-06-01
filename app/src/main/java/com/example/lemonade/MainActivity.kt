@@ -102,7 +102,13 @@ class MainActivity : AppCompatActivity() {
             if (lemonSize == 0) {
                 lemonadeState = "drink"
             }
+        } else if (lemonadeState == "drink") {
+            lemonadeState = "restart"
+            lemonSize = -1
+        } else if (lemonadeState == "restart"){
+            lemonadeState = "select"
         }
+
         // TODO: use a conditional statement like 'if' or 'when' to track the lemonadeState
         //  when the image is clicked we may need to change state to the next step in the
         //  lemonade making progression (or at least make some changes to the current state in the
