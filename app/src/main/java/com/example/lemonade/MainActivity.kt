@@ -169,8 +169,22 @@ class MainActivity : AppCompatActivity() {
                 textAction.text = getString(R.string.lemon_select)
                 lemonImage?.setImageResource(R.drawable.lemon_tree)
             }
-            // TODO: set other states of lemonadeState
-            else -> println("else")
+            "squeeze" -> {
+                textAction.text = getString(R.string.lemon_squeeze)
+                lemonImage?.setImageResource(R.drawable.lemon_squeeze)
+            }
+            "drink" -> {
+                textAction.text = getString(R.string.lemon_drink)
+                lemonImage?.setImageResource(R.drawable.lemon_drink)
+            }
+            "restart" -> {
+                textAction.text = getString(R.string.lemon_empty_glass)
+                lemonImage?.setImageResource(R.drawable.lemon_restart)
+            }
+            else -> {
+                textAction.text = getString(R.string.lemon_select)
+                lemonImage?.setImageResource(R.drawable.lemon_tree)
+            }
         }
 
 
