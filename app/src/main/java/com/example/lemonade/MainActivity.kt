@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 lemonSize = -1
             }
             "restart" -> lemonadeState = "select"
-            else -> lemonadeState = "select"
+            else -> throw IllegalStateException("Something went wrong")
         }
 
         // if else  statements, replaced with when statement above
@@ -181,10 +181,7 @@ class MainActivity : AppCompatActivity() {
                 textAction.text = getString(R.string.lemon_empty_glass)
                 lemonImage?.setImageResource(R.drawable.lemon_restart)
             }
-            else -> {
-                textAction.text = getString(R.string.lemon_select)
-                lemonImage?.setImageResource(R.drawable.lemon_tree)
-            }
+            else -> throw IllegalStateException("Something's going wrong around here.")
         }
 
 
