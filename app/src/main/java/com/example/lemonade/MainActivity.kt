@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     private fun clickLemonImage() {
         if (lemonadeState == "select") {
             lemonadeState = "squeeze"
-            lemonSize = 7
+            lemonSize = LemonTree().pick()
             squeezeCount = 0
         }
         // TODO: use a conditional statement like 'if' or 'when' to track the lemonadeState
