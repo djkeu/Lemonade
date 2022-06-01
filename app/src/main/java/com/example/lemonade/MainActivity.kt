@@ -167,7 +167,7 @@ class MainActivity : AppCompatActivity() {
         when (lemonadeState) {
             "select" -> {
                 textAction.text = getString(R.string.lemon_select)
-                lemonImage.setImageDrawable(R.drawable.lemon_tree)
+                lemonImage.setImageResource(R.drawable.lemon_tree)
             }
             else -> println("else")
         }
