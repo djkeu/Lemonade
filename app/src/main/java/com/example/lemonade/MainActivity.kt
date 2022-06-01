@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
         lemonImage!!.setOnLongClickListener {
             // TODO: replace 'false' with a call to the function that shows the squeeze count
             showSnackbar()
-            false
         }
     }
 
@@ -93,6 +92,10 @@ class MainActivity : AppCompatActivity() {
      * This method determines the state and proceeds with the correct action.
      */
     private fun clickLemonImage() {
+        when (lemonadeState == SELECT) {
+            lemonadeState -> SQUEEZE
+
+        }
         // TODO: use a conditional statement like 'if' or 'when' to track the lemonadeState
         //  when the image is clicked we may need to change state to the next step in the
         //  lemonade making progression (or at least make some changes to the current state in the
